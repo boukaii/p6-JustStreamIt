@@ -1,0 +1,289 @@
+body {
+    background-color: #000000;
+    color: white;
+
+}
+
+header {
+  display: flex;
+  font-style: italic;
+  
+}
+
+h2 {
+    text-align: center;
+}
+
+
+#bestMovie {
+  text-align: center;
+  flex: 2;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 250px;
+}
+
+#myBtn {
+  text-align: center;
+  font-size: 18px;
+  width: 100px;
+  font-style: italic;
+  line-height: 180%;
+  border-radius: 30px;
+  
+}
+
+#best-movie-description p {
+  font-style: italic;
+  line-height: 180%;
+  margin-right: 60%;
+  margin-top: 3%;
+  text-align: center;
+
+}
+
+#bestMovie_image img {
+  border-radius: 10px;
+  box-shadow: 10px 10px 10px rgba(247, 9, 9, 0.4);
+  float: right;
+  max-width: 280px;
+  min-width: 200px;
+  width: 40%;
+}
+
+#bestMovieBlock {
+  text-align: center;
+  border: 250 px rgb(241, 5, 5) solid;
+  background-color: rgb(0, 0, 0);
+}
+
+
+
+.categorie_best {
+  display: flex;
+}
+
+
+.categorie_best1 {
+  display: flex;
+}
+
+
+.categorie_best2 {
+  display: flex;
+}
+
+.categorie_best3 {
+  display: flex;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.topnav {
+    overflow: hidden;
+    background-color: rgb(3, 0, 0);
+    margin-right: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px;
+  }
+  
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .topnav a:hover {
+    background-color: rgb(252, 4, 4);
+    color: rgb(255, 255, 255);
+  }
+  
+  .topnav a.active {
+    background-color: #ffffff;
+    color: rgb(8, 0, 0);
+    margin-right: 900px;
+    margin-left: 50px;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #4e0404;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    text-align: center;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: rgb(243, 6, 6);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.slide{
+    padding-top: 80px;
+    padding-bottom: 80px;
+     display: flex;
+     overflow:scroll;
+     scroll-behavior: smooth;
+ }
+ .ensemble-fleche{
+     width:700px;
+     min-width: 700px;
+     display: flex;
+     margin: auto;
+ }
+
+ ::-webkit-scrollbar{
+     display: none;
+ }
+ .card{
+border: 1px solid whitesmoke;
+width:200px;
+height: 400px;
+min-width:200px;
+min-height:400px;
+transition-duration: 1000ms;
+margin: 5px;
+z-index: 1;
+}
+.card1{
+background: url(2.png);
+background-size: cover;
+}
+.card2{
+background:url(2.png);
+background-size: cover;
+
+}
+.card3{
+background:url(2.png);
+background-size: cover;
+}
+.card4{
+background:url(2.png);
+background-size: cover;
+}
+
