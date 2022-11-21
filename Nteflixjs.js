@@ -51,14 +51,6 @@ function ouverture_modal_film(movie, alt) {
 
 
 
-fds
-
-film
-
-
-
-
-
 
 
 
