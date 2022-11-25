@@ -7,7 +7,7 @@ const titleMainMovie = document.getElementById("bestMovie_titre");
 const descriptionMainMovie = document.getElementById("bestMovie_description");
 const imageMainMovie = document.getElementById("bestMovie_image");
 
-// MODAL 
+// MODAL
 var modal = document.getElementById("myModal");
 var btn = document.getElementById("test1");
 var span = document.getElementsByClassName("close")[0];
@@ -30,7 +30,6 @@ window.onclick = function(event) {
     }
 }
 
-
 // fonction info modal
 function ouverture_modal_film(movie, alt) {
     console.log("movie = " + movie.title);
@@ -44,13 +43,36 @@ function ouverture_modal_film(movie, alt) {
     document.getElementById("modal-box-office").innerHTML = movie.avg_vote;
     document.getElementById("modal-description").innerHTML = movie.long_description;
     document.getElementById("modal-actors").innerHTML = movie.actors;
-    document.getElementById("modal-img").innerHTML = "<img src=" + movie.image_url + "alt='" + alt + " Film Image' height='400' width='300'/>";1
+    document.getElementById("modal-img").innerHTML = "<img src=" + movie.image_url + "alt='" + alt + " Film Image' height='400' width='300'/>";
     document.getElementById("modal-countries").innerHTML = movie.countries;
     document.getElementById("modal-director").innerHTML = movie.directors;
 }
 
 
-
+// fonction info modal
+function fetch_movie(id) {
+    const url = mainUrl + id
+    console.log(url)
+    fetch(url).then(function(res) {
+        if (res.ok) {
+            return res.json();
+        }
+    }).then(function(movie) {
+        document.getElementById("modal-title").innerHTML = movie.title;
+        document.getElementById("modal-genre").innerHTML = movie.genres;
+        document.getElementById("modal-year").innerHTML = movie.year;
+        document.getElementById("modal-duration").innerHTML = movie.duration;
+        document.getElementById("modal-rated").innerHTML = movie.rated;
+        document.getElementById("modal-score").innerHTML = movie.imdb_score;
+        document.getElementById("modal-box-office").innerHTML = movie.avg_vote;
+        document.getElementById("modal-description").innerHTML = movie.long_description;
+        document.getElementById("modal-actors").innerHTML = movie.actors;
+        const alt = "image du film " + movie.title
+        document.getElementById("modal-img").innerHTML = "<img src=" + movie.image_url + "alt='" + alt + " Film Image' height='400' width='300'/>";
+        document.getElementById("modal-countries").innerHTML = movie.countries;
+        document.getElementById("modal-director").innerHTML = movie.directors;
+    })
+}
 
 
 
@@ -66,27 +88,17 @@ fetch(besFilmUrl)
         titleMainMovie.innerHTML = value.title;
         descriptionMainMovie.innerHTML = value.description;
         imageMainMovie.innerHTML = "<img src=" + value.image_url + "alt='" + alt + " Film Image' height='400' width='300'/>"
-        mybutton.onclick = function () { ouverture_modal_film(value, alt);};
+        mybutton.onclick = function () {
+            ouverture_modal_film(value, alt);
+            modal.style.display = "block";
+        };
     })
     .catch(function(err) {
         console.log("Une erreur est survenue")
     });
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-// catégorie 7 meilleures films 
+// catégorie 7 meilleures films
 function inject_html_film(url, nb_element = 5){
     fetch(url)
         .then(function(res) {
@@ -102,7 +114,7 @@ function inject_html_film(url, nb_element = 5){
                     let alt = "Best";
                     monfilm.setAttribute("id", "films_list_best_" + movie.id);
                     monfilm.innerHTML = "<img src=" + movie.image_url + "alt='" + alt + " Film Image' height='400' width='300'/>";
-                    monfilm.onclick = function () { ouverture_modal_film(movie, alt);};
+                    monfilm.onclick = function () { fetch_movie(movie.id);};
                     section_best_film.append(monfilm);
                 }
                 i += 1;
@@ -112,10 +124,9 @@ function inject_html_film(url, nb_element = 5){
                 console.log("Une erreur est survenue")
         });
 }
-
 let contenu = document.getElementById("contenu");
 // créer la section
-let section_best_film = document.createElement("section");  
+let section_best_film = document.createElement("section");
 
 // ajoute ID a la section + la class
 section_best_film.setAttribute("id", "categorie_best")
@@ -146,7 +157,7 @@ function catégorie(url, nb_element = 5){
                     let alt = "Action";
                     monfilm.setAttribute("id", "films_list_best_" + i);
                     monfilm.innerHTML = "<img src=" + movie.image_url + "alt='" + alt + " Film Image' height='400' width='300'/>";
-                    monfilm.onclick = function () { ouverture_modal_film(movie, alt); };
+                    monfilm.onclick = function () { fetch_movie(movie.id);};
                     section_categorie1.append(monfilm);
                 }
                 i += 1;
@@ -159,7 +170,7 @@ function catégorie(url, nb_element = 5){
     }
 let contenu1 = document.getElementById("contenu1");
 // créer la section
-let section_categorie1 = document.createElement("section");  
+let section_categorie1 = document.createElement("section");
 // ajoute ID a la section + la class
 section_categorie1.setAttribute("id", "categorie_best1")
 section_categorie1.setAttribute("class", "categorie_best1");
@@ -189,7 +200,7 @@ function catégorie2(url, nb_element = 5){
                     let alt = "Horreur";
                     monfilm.setAttribute("id", "films_list_best_" + i);
                     monfilm.innerHTML = "<img src=" + movie.image_url + "alt='" + alt + " Film Image' height='400' width='300'/>";
-                    monfilm.onclick = function () { ouverture_modal_film(movie, alt); };
+                    monfilm.onclick = function () { fetch_movie(movie.id);};
                     section_categorie2.append(monfilm);
                 }
                 i += 1;
@@ -202,7 +213,7 @@ function catégorie2(url, nb_element = 5){
     }
 let contenu2 = document.getElementById("contenu2");
 // créer la section
-let section_categorie2 = document.createElement("section");  
+let section_categorie2 = document.createElement("section");
 // ajoute ID a la section + la class
 section_categorie2.setAttribute("id", "categorie_best2")
 section_categorie2.setAttribute("class", "categorie_best2");
@@ -232,7 +243,7 @@ function catégorie3(url, nb_element = 5){
                     let alt = "Drame";
                     monfilm.setAttribute("id", "films_list_best_" + i);
                     monfilm.innerHTML = "<img src=" + movie.image_url + "alt='" + alt + " Film Image' height='400' width='300'/>";
-                    monfilm.onclick = function () { ouverture_modal_film(movie, alt); };
+                    monfilm.onclick = function () { fetch_movie(movie.id);};
                     section_categorie3.append(monfilm);
                 }
                 i += 1;
@@ -245,7 +256,7 @@ function catégorie3(url, nb_element = 5){
     }
 let contenu3 = document.getElementById("contenu3");
 // créer la section
-let section_categorie3 = document.createElement("section");  
+let section_categorie3 = document.createElement("section");
 // ajoute ID a la section + la class
 section_categorie3.setAttribute("id", "categorie_best3")
 section_categorie3.setAttribute("class", "categorie_best3");
@@ -255,3 +266,6 @@ let categorie_drama_movie = "http://localhost:8000/api/v1/titles/?genre=drama&so
 catégorie3(categorie_drama_movie);
 let  categorie_drama_movie2 = "http://localhost:8000/api/v1/titles/?genre=drama&page=2&sort_by=-imdb_score";
 catégorie3(categorie_drama_movie2, 1);
+
+
+
