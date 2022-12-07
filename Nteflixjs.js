@@ -48,7 +48,6 @@ function ouverture_modal_film(movie, alt) {
     document.getElementById("modal-director").innerHTML = movie.directors;
 }
 
-
 // fonction info modal
 function fetch_movie(id) {
     const url = mainUrl + id
@@ -199,7 +198,7 @@ function catégorie2(url, nb_element = 5){
                     let monfilm = document.createElement("p");
                     let alt = "Horreur";
                     monfilm.setAttribute("id", "films_list_best_" + i);
-                    monfilm.innerHTML = "<img src=" + movie.image_url + "alt='" + alt + " Film Image' height='400' width='300'/>";
+                    monfilm.innerHTML = "<img src=" + movie.image_url + "alt='" + alt + " Describe Image' height='400' width='300'/>";
                     monfilm.onclick = function () { fetch_movie(movie.id);};
                     section_categorie2.append(monfilm);
                 }
