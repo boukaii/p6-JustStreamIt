@@ -5,7 +5,6 @@ const urlAnimation = "http://localhost:8000/api/v1/titles/?genre=animation&sort_
 const urlAction = "http://localhost:8000/api/v1/titles/?genre=action&sort_by=-imdb_score";
 
 // film au plus haut score imdb
-// let title = document.getElementById('title-best-film')[0];
 let title = document.getElementsByClassName('title-best-film')[0];
 let abstract = document.getElementsByClassName('abstract')[0];
 let img = document.getElementsByClassName('img-best')[0];

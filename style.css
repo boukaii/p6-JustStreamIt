@@ -60,58 +60,6 @@ nav li, .drop-down, .drop-down li a{
     cursor: pointer;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-/* 
-.drop-down{
-    width: 120px;
-    align-self: flex-start;
-    display: flex;
-    flex-direction: column;
-}
-.drop-down li a {
-    display: none;
-}
-.drop-down:hover li a{
-    display: inline;
-    position: relative;
-}
-.drop-down:hover li{
-    padding: 8px 15px;
-    z-index: 1;
-    background-color: rgb(17, 75, 126);
-    width: 120px;
-}
-
-
-
- */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* Welcome video */
 .best-film {
     display: flex;
