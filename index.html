@@ -13,7 +13,7 @@
     <div id="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
-            <img class="img-modal">
+            <img class="img-modal" src="" alt="img">
             <div class="text-modal">
                 <p class="modal-txt"></p>
             </div>
@@ -23,12 +23,10 @@
     <header>
         <img class="logo" src="static/img/logo.png" alt="logo du site">
         <nav>
-            <li>Accueil<hr class="nav-line"></li>
-            <ul class="drop-down">Catégories<hr class="nav-line">
-                <li><a href=#fantasy>Fantasy</a></li>
-                <li><a href=#animation>Animation</a></li>
-                <li><a href=#action>Action</a></li>
-            </ul>
+            <a href=#Accueil>Accueil</a>
+                <a href=#fantasy>Fantasy</a>
+                <a href=#animation>Animation</a>
+                <a href=#action>Action</a>
         </nav>
     </header>
     <!-- film au meilleur score imdb -->
@@ -39,21 +37,20 @@
             <p class="abstract"></p>
         </div>
         <div class="img-zone">
-            <img class="img-best" src="" alt="">
+            <img class="img-best" src=" " alt="img">
         </div>
     </section>
     <!-- 7 films suivants les mieux notés -->
     <section class="film-section">
-        <h2>Films les mieux notés<hr></h2>
+        <h2>Films les mieux notés</h2>
         <div class="film-list sevenBest">
-            
             <img class="cursor-left" src="static/img/flecheGauche.png" alt="fleche de défilement" onclick="goLeft(bestFilms)">
             <img class="cursor-right" src="static/img/flecheDroite.png" alt="fleche de défilement" onclick="goRight(bestFilms)">
         </div>
     </section>
     <!-- Section Fantasy -->
     <section class="film-section">
-        <h2 id="fantasy">Fantasy<hr></h2>
+        <h2 id="fantasy">Fantasy</h2>
         <div class="film-list fantasy">
             <img class="cursor-left" src="static/img/flecheGauche.png" alt="fleche de défilement" onclick="goLeft(zoneFantasy)">
             <img class="cursor-right" src="static/img/flecheDroite.png" alt="fleche de défilement" onclick="goRight(zoneFantasy)">
@@ -61,7 +58,7 @@
     </section>
     <!-- Section Animation -->
     <section class="film-section">
-        <h2 id="animation">Animation<hr></h2>
+        <h2 id="animation">Animation</h2>
         <div class="film-list animation">
             <img class="cursor-left" src="static/img/flecheGauche.png" alt="fleche de défilement" onclick="goLeft(zoneAnimation)">
             <img class="cursor-right" src="static/img/flecheDroite.png" alt="fleche de défilement" onclick="goRight(zoneAnimation)">
@@ -69,7 +66,7 @@
     </section>
     <!-- Section Action -->
     <section class="film-section">
-        <h2 id="action">Action<hr></h2>
+        <h2 id="action">Action</h2>
         <div class="film-list action">
             <img class="cursor-left" src="static/img/flecheGauche.png" alt="fleche de défilement" onclick="goLeft(zoneAction)">
             <img class="cursor-right" src="static/img/flecheDroite.png" alt="fleche de défilement" onclick="goRight(zoneAction)">

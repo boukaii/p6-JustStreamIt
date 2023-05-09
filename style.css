@@ -59,6 +59,19 @@ nav li, .drop-down, .drop-down li a{
     font-weight: 600;
     cursor: pointer;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
 .drop-down{
     width: 120px;
     align-self: flex-start;
@@ -78,6 +91,26 @@ nav li, .drop-down, .drop-down li a{
     background-color: rgb(17, 75, 126);
     width: 120px;
 }
+
+
+
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Welcome video */
 .best-film {
@@ -200,8 +233,8 @@ footer p {
 #modal {
     display: none;
     position: fixed;
-    background-color: whitesmoke;
-    border: rgb(98, 112, 124) 20px solid;
+    background-color: rgb(71, 9, 172);
+    border: rgb(0, 5, 10) 20px solid;
     max-height: 50%;
     bottom: 0%;
     left: 0%;
@@ -223,8 +256,8 @@ footer p {
 }
 .close {
     text-align: center;
-    background-color: whitesmoke;
-    border: rgba(0, 0, 0, 0.253) 1px solid;
+    background-color: rgb(224, 4, 4);
+    border: rgba(197, 12, 12, 0.253) 1px solid;
     height: 35px;
     width: 35px;
     position: fixed;
@@ -256,7 +289,7 @@ p em {
 @media screen and (max-width : 640px) {
     /* fenêtre modale */
     #modal {
-        border: rgb(98, 112, 124) 10px solid;
+        border: rgb(9, 114, 206) 10px solid;
         right: 0%;
     }    
     .text-modal p {
